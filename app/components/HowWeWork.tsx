@@ -22,14 +22,11 @@ export default function HowWeWork() {
             color: "rgba(255,255,255,0.8)",
           }}>Project: React + Django Dashboard</div>
           <div style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
+            display: "flex", alignItems: "center", gap: "8px",
             padding: "10px 12px",
             background: "rgba(74,222,128,0.1)",
             borderRadius: "8px",
-            fontSize: "12px",
-            color: "#4ade80",
+            fontSize: "12px", color: "#4ade80",
           }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#4ade80", display: "inline-block" }}></span>
             Started working on it!
@@ -88,65 +85,55 @@ export default function HowWeWork() {
   ];
 
   return (
-    <section id="how-we-work" style={{ padding: "120px 0", position: "relative" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
-        {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "80px" }}>
+    <section id="how-we-work" style={{ padding: "80px 0", position: "relative" }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .step-grid { grid-template-columns: 1fr !important; gap: 24px !important; direction: ltr !important; }
+        }
+      `}</style>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+        <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <p style={{
-            color: "var(--purple-light)",
-            fontSize: "12px",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            fontFamily: "'DM Mono', monospace",
-            marginBottom: "12px",
+            color: "var(--purple-light)", fontSize: "12px",
+            letterSpacing: "0.15em", textTransform: "uppercase",
+            fontFamily: "'DM Mono', monospace", marginBottom: "12px",
           }}>How we work</p>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 900, lineHeight: 1.1 }}>
+          <h2 style={{ fontSize: "clamp(32px, 5vw, 64px)", fontWeight: 900, lineHeight: 1.1 }}>
             3 <em style={{ fontStyle: "italic", fontWeight: 400, color: "var(--purple-light)" }}>effortless</em> steps
           </h2>
         </div>
 
-        {/* Steps */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "80px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "60px" }}>
           {steps.map((step, i) => (
-            <div key={step.num} style={{
+            <div key={step.num} className="step-grid" style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
-              gap: "80px",
+              gap: "60px",
               alignItems: "center",
               direction: i % 2 === 1 ? "rtl" : "ltr",
             }}>
-              {/* Text side */}
               <div style={{ direction: "ltr" }}>
                 <div style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
+                  display: "inline-flex", alignItems: "center", gap: "8px",
                   padding: "6px 16px",
                   background: "rgba(107,92,231,0.15)",
                   border: "1px solid rgba(107,92,231,0.3)",
-                  borderRadius: "100px",
-                  fontSize: "12px",
+                  borderRadius: "100px", fontSize: "12px",
                   color: "var(--purple-light)",
                   fontFamily: "'DM Mono', monospace",
-                  marginBottom: "1.5rem",
+                  marginBottom: "1.2rem",
                 }}>
                   <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--purple)", display: "inline-block" }}></span>
                   {step.num}
                 </div>
                 <h3 style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "clamp(28px, 3.5vw, 42px)",
-                  fontWeight: 700,
-                  lineHeight: 1.2,
-                  marginBottom: "1.2rem",
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: "clamp(24px, 3.5vw, 42px)",
+                  fontWeight: 700, lineHeight: 1.2, marginBottom: "1rem",
                 }}>{step.title}</h3>
                 <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", lineHeight: 1.8 }}>{step.desc}</p>
               </div>
-
-              {/* Visual side */}
-              <div style={{ direction: "ltr" }}>
-                {step.visual}
-              </div>
+              <div style={{ direction: "ltr" }}>{step.visual}</div>
             </div>
           ))}
         </div>
