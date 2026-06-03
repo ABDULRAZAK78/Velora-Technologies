@@ -57,13 +57,11 @@ export default function Navbar() {
           background: "var(--purple)",
           borderRadius: "8px",
           display: "flex", alignItems: "center", justifyContent: "center",
+          fontFamily: "'Cormorant Garamond', serif",
+          fontWeight: 700,
+          fontSize: "16px",
           flexShrink: 0,
-        }}>
-          <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-            <rect width="40" height="40" rx="8" fill="#6B5CE7"/>
-            <path d="M10 10 L20 28 L30 10" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          </svg>
-        </div>
+        }}>V</div>
         <div>
           <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700, fontSize: "15px", lineHeight: 1 }}>
             Velora Technologies
