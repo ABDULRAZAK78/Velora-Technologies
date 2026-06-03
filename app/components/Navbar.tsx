@@ -48,20 +48,45 @@ export default function Navbar() {
           .desktop-cta { display: flex !important; }
           .mobile-btn { display: none !important; }
         }
+        @keyframes b1anim { 0%,100% { transform: translate(0,0); } 50% { transform: translate(2px,-3px); } }
+        @keyframes b2anim { 0%,100% { transform: translate(0,0); } 50% { transform: translate(4px,-5px); } }
+        @keyframes b3anim { 0%,100% { transform: translate(0,0); } 50% { transform: translate(6px,-4px); } }
+        @keyframes b4anim { 0%,100% { transform: translate(0,0); } 50% { transform: translate(3px,-6px); } }
+        @keyframes b5anim { 0%,100% { transform: translate(0,0); } 50% { transform: translate(7px,-3px); } }
+        @keyframes b6anim { 0%,100% { transform: translate(0,0); } 50% { transform: translate(5px,-7px); } }
+        .b1 { animation: b1anim 2.0s ease-in-out infinite; }
+        .b2 { animation: b2anim 2.4s ease-in-out infinite 0.2s; }
+        .b3 { animation: b3anim 2.1s ease-in-out infinite 0.4s; }
+        .b4 { animation: b4anim 2.6s ease-in-out infinite 0.1s; }
+        .b5 { animation: b5anim 1.9s ease-in-out infinite 0.3s; }
+        .b6 { animation: b6anim 2.3s ease-in-out infinite 0.5s; }
       `}</style>
 
-      {/* Logo */}
+      {/* Logo — V with flying birds */}
       <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
-        <div style={{
-          width: 36, height: 36,
-          background: "var(--purple)",
-          borderRadius: "8px",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          fontFamily: "'Cormorant Garamond', serif",
-          fontWeight: 700,
-          fontSize: "16px",
-          flexShrink: 0,
-        }}>V</div>
+        <svg width="48" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* V letter */}
+          <path d="M4 6 L22 38 L40 6" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          {/* Birds — small curved wing shapes flying out top-right */}
+          <g className="b1" style={{ transformOrigin: "33px 8px" }}>
+            <path d="M31 8 Q33 5.5 35 8 Q33 7 31 8Z" fill="white" opacity="0.95"/>
+          </g>
+          <g className="b2" style={{ transformOrigin: "36px 5px" }}>
+            <path d="M34 5 Q36 2.5 38 5 Q36 4 34 5Z" fill="white" opacity="0.85"/>
+          </g>
+          <g className="b3" style={{ transformOrigin: "40px 7px" }}>
+            <path d="M38 7 Q40 4.5 42 7 Q40 6 38 7Z" fill="white" opacity="0.7"/>
+          </g>
+          <g className="b4" style={{ transformOrigin: "34px 11px" }}>
+            <path d="M32 11 Q34 8.5 36 11 Q34 10 32 11Z" fill="white" opacity="0.8"/>
+          </g>
+          <g className="b5" style={{ transformOrigin: "39px 3px" }}>
+            <path d="M37 3 Q39 1 41 3 Q39 2 37 3Z" fill="white" opacity="0.6"/>
+          </g>
+          <g className="b6" style={{ transformOrigin: "43px 5px" }}>
+            <path d="M41 5 Q43 3 45 5 Q43 4 41 5Z" fill="white" opacity="0.5"/>
+          </g>
+        </svg>
         <div>
           <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700, fontSize: "15px", lineHeight: 1 }}>
             Velora Technologies
