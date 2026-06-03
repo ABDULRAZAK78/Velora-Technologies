@@ -33,7 +33,7 @@ export default function Pricing() {
           <div className="pricing-left" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <div style={{ background: "var(--bg2)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2rem", flex: 1 }}>
               <p style={{ fontSize: "12px", color: "var(--muted)", marginBottom: "4px", fontFamily: "'DM Mono', monospace", textTransform: "uppercase", letterSpacing: "0.1em" }}>Quick Build</p>
-              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "48px", fontWeight: 900, color: "var(--yellow)", lineHeight: 1, marginBottom: "0.8rem" }}>₹400</div>
+              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "48px", fontWeight: 900, color: "var(--yellow)", lineHeight: 1, marginBottom: "0.8rem" }}>₹300</div>
               <p style={{ fontSize: "13px", color: "var(--muted)", marginBottom: "1.2rem" }}>Perfect for simple tasks.</p>
               <div style={{ borderTop: "1px solid var(--border)", paddingTop: "1.2rem" }}>
                 {["Login / Register page", "CRUD App", "Single REST API", "Responsive Portfolio", "2–4 hr delivery"].map(f => (
@@ -69,7 +69,7 @@ export default function Pricing() {
             <div style={{ position: "absolute", top: "-40px", right: "-40px", width: "180px", height: "180px", borderRadius: "50%", background: "rgba(107,92,231,0.15)", filter: "blur(40px)", pointerEvents: "none" }} />
             <p style={{ fontSize: "12px", color: "var(--muted)", marginBottom: "4px", fontFamily: "'DM Mono', monospace", textTransform: "uppercase", letterSpacing: "0.1em" }}>Standard</p>
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "24px", fontStyle: "italic", fontWeight: 400, color: "var(--purple-light)", marginBottom: "0.5rem" }}>Plan</p>
-            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "56px", fontWeight: 900, color: "var(--yellow)", lineHeight: 1, marginBottom: "0.8rem" }}>₹700</div>
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "56px", fontWeight: 900, color: "var(--yellow)", lineHeight: 1, marginBottom: "0.8rem" }}>₹500</div>
             <p style={{ fontSize: "13px", color: "var(--muted)", marginBottom: "1.5rem", lineHeight: 1.6 }}>Full-featured projects with auth and dashboard.</p>
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: "1.5rem", marginBottom: "1.5rem" }}>
               {["Admin Dashboard", "Auth System (JWT)", "Mini Full-Stack App", "Blog System", "React + Spring Boot", "React + Django", "1–2 day delivery"].map(f => (

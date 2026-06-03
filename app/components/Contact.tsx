@@ -46,17 +46,17 @@ export default function Contact() {
       <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 2rem" }}>
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <p style={{ color: "var(--purple-light)", fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "'DM Mono', monospace", marginBottom: "12px" }}>Contact</p>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 7vw, 80px)", fontWeight: 900, lineHeight: 1.05 }}>
-            Let&apos;s get <em style={{ fontStyle: "italic", fontWeight: 400, color: "var(--purple-light)" }}>started!</em>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(40px, 7vw, 80px)", fontWeight: 900, lineHeight: 1.05 }}>
+            {"Let's get"} <em style={{ fontStyle: "italic", fontWeight: 400, color: "var(--purple-light)" }}>started!</em>
           </h2>
-          <p style={{ color: "var(--muted)", fontSize: "15px", marginTop: "1rem" }}>Tell us what you need. We&apos;ll get back within hours.</p>
+          <p style={{ color: "var(--muted)", fontSize: "15px", marginTop: "1rem" }}>{"Tell us what you need. We'll get back within hours."}</p>
         </div>
 
         {sent ? (
           <div style={{ textAlign: "center", padding: "4rem", background: "rgba(107,92,231,0.1)", borderRadius: "16px", border: "1px solid rgba(107,92,231,0.3)" }}>
             <div style={{ fontSize: "48px", marginBottom: "1rem" }}>✅</div>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "28px", marginBottom: "0.5rem" }}>Message Sent!</h3>
-            <p style={{ color: "var(--muted)" }}>We&apos;ll reply on WhatsApp very soon.</p>
+            <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "28px", marginBottom: "0.5rem" }}>Message Sent!</h3>
+            <p style={{ color: "var(--muted)" }}>{"We'll reply on WhatsApp very soon."}</p>
             <button onClick={() => setSent(false)} style={{ marginTop: "1.5rem", padding: "10px 24px", borderRadius: "100px", background: "var(--purple)", border: "none", color: "#fff", cursor: "pointer", fontSize: "14px" }}>Send Another</button>
           </div>
         ) : (
